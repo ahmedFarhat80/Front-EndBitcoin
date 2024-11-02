@@ -1,0 +1,216 @@
+/* General Body Styling */
+body {
+    margin: 0;
+    background-color: #030902;
+    color: #FFF;
+    font-family: Arial, sans-serif;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #1c1c1c;
+    /* لون خلفية شريط التمرير */
+}
+
+::-webkit-scrollbar-thumb {
+    background: #5EBB47;
+    /* لون شريط التمرير */
+    border-radius: 10px;
+    /* زوايا دائرية لشريط التمرير */
+}
+
+/* تغيير لون الشريط عند التمرير */
+::-webkit-scrollbar-thumb:hover {
+    background: #4b9e3c;
+    /* لون أغمق عند تمرير الماوس فوقه */
+}
+
+
+
+/* Header Styling */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 100px;
+    z-index: 1;
+}
+
+.nav-link-1 {
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    margin: 0 15px;
+}
+
+.nav-link-1:hover {
+    color: #5EBB47;
+}
+
+.sign-up-btn {
+    background-color: #5EBB47;
+    color: #FFF;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.sign-up-btn:hover {
+    background-color: #4A4A4A;
+    /* لون الزر عند المرور */
+}
+
+/* Main Section Text Styling */
+.main-section {
+    text-align: center;
+    padding-top: 200px;
+    z-index: 2;
+}
+
+.main-section h1 {
+    font-size: 48px;
+    /* حجم عنوان القسم */
+    margin: 0;
+    /* إزالة الهوامش */
+}
+
+.main-section p {
+    font-size: 18px;
+    /* حجم نص الفقرة */
+    color: rgba(255, 255, 255, 0.7);
+    /* لون نص الفقرة */
+}
+
+.get-started-btn {
+    padding: 10px 25px;
+    /* هوامش زر البداية */
+    background-color: #5EBB47;
+    /* لون زر البداية */
+    color: #FFF;
+    /* لون نص الزر */
+    border-radius: 5px;
+    /* زوايا مدورة */
+    cursor: pointer;
+    /* تغيير شكل المؤشر عند المرور */
+    border: none;
+    /* إزالة الحدود */
+    margin-top: 20px;
+    /* هوامش الزر */
+}
+
+.get-started-btn:hover {
+    background-color: #4A4A4A;
+    /* لون الزر عند المرور */
+}
+
+
+/* SVG Styling */
+.svg-container {
+    position: absolute;
+    /* وضع الـ SVG */
+    top: 50%;
+    /* محاذاة عمودية */
+    left: 50%;
+    /* محاذاة أفقية */
+    transform: translate(-50%, -50%);
+    /* تحريك العنصر للوسط */
+}
+
+/* Planet Styles */
+.planet {
+    transition: transform 0.3s;
+    /* تأثير الحركة */
+}
+
+.planet:hover {
+    transform: scale(1.2);
+    /* تكبير الكوكب عند مرور الماوس */
+}
+
+/* Light effects */
+.green-light,
+.purple-light {
+    position: absolute;
+    /* وضع الأضواء */
+    width: 300px;
+    /* عرض الضوء */
+    height: 300px;
+    /* ارتفاع الضوء */
+    border-radius: 50%;
+    /* شكل دائري */
+    filter: blur(100px);
+    /* تأثير ضبابي */
+    animation: pulse-light 3s ease-in-out infinite;
+    /* تأثير نبضي */
+}
+
+
+
+
+/* Text Styling */
+.text-make {
+    color: #FFF;
+    /* لون النص */
+    text-align: center;
+    /* محاذاة النص */
+    font-family: Inter, sans-serif;
+    /* نوع الخط */
+    font-style: normal;
+    /* أسلوب الخط */
+    font-weight: 900;
+    /* وزن الخط */
+    line-height: 130%;
+    /* ارتفاع السطر */
+    position: relative;
+    /* وضع النص */
+    z-index: 1;
+    /* ضمان ظهور النص فوق الخلفية */
+    text-shadow:
+        /* تأثير الظل المتعدد */
+        1px 1px 0 rgb(93, 195, 67),
+        /* ظل أخضر */
+        -1px -1px 0 rgba(255, 255, 255, 0.5),
+        /* ظل أبيض خفيف */
+        0 0 5px rgba(94, 187, 71, 0.5),
+        /* ظل ضبابي أخضر */
+        0 0 10px rgba(94, 187, 71, 0.5);
+    /* ظل ضبابي أخضر إضافي */
+}
+
+/* External Shadow for Text */
+.text-make::after {
+    content: "";
+    /* لجعل العنصر يعمل */
+    position: absolute;
+    /* وضع الظل */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    /* وضع الظل خلف النص */
+    clip-path: inset(5px);
+    /* تحديد حدود الظل */
+    filter: blur(5px);
+    /* تأثير ضبابي للظل */
+}
+
+/* Keyframes */
+@keyframes pulse-light {
+
+    0%,
+    100% {
+        opacity: 0.5;
+        /* شفافية الضوء في البداية والنهاية */
+    }
+
+    50% {
+        opacity: 1;
+        /* شفافية الضوء في المنتصف */
+    }
+}
