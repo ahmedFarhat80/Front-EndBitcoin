@@ -9,533 +9,12 @@
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 
     <link rel="stylesheet" href="assets/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
 
-    <style>
-        body {
-            position: relative;
-        }
-
-        .galaxy-background {
-            height: 194vh;
-            width: 100%;
-            background-image: url('./assets/image/circles.svg');
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-position: center;
-            position: absolute;
-            top: 0;
-            left: 0;
-            z-index: -2;
-        }
-
-        .svg-element {
-            position: absolute;
-            width: 10vw;
-            transition: transform 0.3s;
-        }
-
-        .planet1 {
-            top: 13%;
-            left: 10%;
-        }
-
-        .planet-1 {
-            top: 39%;
-            left: 6%;
-        }
-
-        .planet2 {
-            top: 56%;
-            left: 13%;
-        }
-
-        .planet3 {
-            top: 24%;
-            left: 80%;
-        }
-
-        .planet4 {
-            top: 50%;
-            left: 75%;
-        }
-
-        .lefit-star {
-            width: 4vw !important;
-            top: 20%;
-            left: 20%;
-        }
-
-        .right-star {
-            width: 5vw !important;
-            top: 11%;
-            left: 80%;
-        }
-
-        .right-sm-star {
-            width: 3vw !important;
-            top: 22%;
-            left: 90%;
-        }
-
-        .right-sm2-star {
-            width: 4vw !important;
-            top: 62%;
-            left: 87%;
-        }
-
-        .star-img-left {
-            width: 3.5vw !important;
-            top: 1170px;
-            left: 9%;
-        }
-
-        .star-img-why {
-            width: 3.5vw !important;
-            top: 2170px;
-            left: 1.3%;
-        }
-
-        .star-img-why-2 {
-            width: 2.5vw !important;
-            top: 2080px;
-            left: 4%;
-        }
-
-        .green {
-            /* width: 3vw !important; */
-            top: 45%;
-            left: 90%;
-        }
-
-        .overlay-section {
-            margin-top: 37%;
-        }
-
-        .glass {
-            width: 5.8vw !important;
-            top: 25.5%;
-            left: 37.5%;
-
-        }
-
-        .light-container {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            pointer-events: none;
-            z-index: -3;
-        }
-
-        .top-green-light {
-            background: linear-gradient(180deg, rgba(24, 255, 158, 0) 0%, #64E726 100%);
-            width: 200px;
-            height: 200px;
-            top: 195px;
-            left: 195px;
-            border-radius: 50%;
-            filter: blur(60px);
-            animation: pulse-light 3s ease-in-out infinite;
-            z-index: -3;
-            position: absolute;
-
-        }
-
-        .top-blue-light {
-            position: absolute;
-            background: #184BFF66;
-            width: 350px;
-            height: 350px;
-            top: 30px;
-            left: 100px;
-            border-radius: 50%;
-            filter: blur(100px);
-            animation: pulse-light 3s ease-in-out infinite;
-            z-index: -3;
-        }
-
-
-        .purple-light {
-            background: linear-gradient(180deg, rgba(0, 194, 255, 0) 0%, #DB0DA1 100%);
-            width: 300px;
-            height: 300px;
-            top: 500px;
-            right: 105px;
-            border-radius: 50%;
-            filter: blur(100px);
-            animation: pulse-light 3s ease-in-out infinite;
-            z-index: -3;
-            position: absolute;
-        }
-
-        .purple-blue-light {
-            background: #184BFF66;
-            width: 300px;
-            height: 300px;
-            top: 400px;
-            right: 1px;
-            border-radius: 50%;
-            filter: blur(100px);
-            animation: pulse-light 3s ease-in-out infinite;
-            z-index: -3;
-            position: absolute;
-        }
-
-        .left-green-light {
-            background: linear-gradient(180deg, rgba(24, 255, 158, 0) 0%, #64E726 100%);
-            width: 450px;
-            height: 450px;
-            top: 1120px;
-            left: -100px;
-            border-radius: 50%;
-            filter: blur(180px);
-            animation: pulse-light 3s ease-in-out infinite;
-            z-index: -3;
-            position: absolute;
-        }
-
-        .left-white-light {
-            background: linear-gradient(180deg, rgba(24, 255, 158, 0) 0%, #ffffff 100%);
-            width: 350px;
-            height: 350px;
-            top: 1000px;
-            left: -100px;
-            border-radius: 50%;
-            filter: blur(150px);
-            animation: pulse-light 3s ease-in-out infinite;
-            z-index: -3;
-            position: absolute;
-        }
-
-        .purple-green-light {
-            background: linear-gradient(180deg, rgba(24, 255, 158, 0) 0%, #64E726 100%);
-            width: 300px;
-            height: 300px;
-            top: 600px;
-            right: 1px;
-            border-radius: 50%;
-            filter: blur(100px);
-            animation: pulse-light 3s ease-in-out infinite;
-            z-index: -3;
-            position: absolute;
-        }
-
-
-        .overlay-section h2 {
-            font-size: 2.5rem;
-            font-weight: bold;
-            color: white;
-            line-height: 1.2;
-        }
-
-
-        .overlay-section h2 {
-            font-size: 2.5rem;
-            font-weight: bold;
-            background: linear-gradient(180deg, #FFFFFF, #5EBB47);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            position: relative;
-            text-shadow:
-                1px 1px 1px rgba(200, 200, 200, 0.6),
-                0 0 3px rgba(80, 170, 56, 0.4),
-                0 0 5px rgba(80, 150, 61, 0.3),
-                0 0 8px rgba(80, 150, 61, 0.2);
-
-        }
-
-
-        .overlay-section h2::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: inherit;
-            filter: blur(8px);
-            /* ضبابية للحصول على تأثير الزجاج */
-            z-index: -1;
-            opacity: 0.7;
-            /* شفافية خفيفة للزجاج */
-        }
-
-        .green-highlight {
-            font-size: 2.5rem;
-            font-weight: bold;
-            background-image:
-                radial-gradient(circle at 20% 30%, #FFFFFF, transparent 80%),
-                linear-gradient(120deg, #5bb145, #FFFFFF);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            position: relative;
-            text-shadow:
-                1px 1px 1px rgba(255, 255, 255, 0.111),
-                0 0 3px rgba(77, 190, 46, 0.4),
-                0 0 5px rgba(44, 132, 20, 0.3),
-                0 0 8px rgba(80, 150, 61, 0.2);
-        }
-
-
-        .text-lead {
-            color: var(--black-black-60, #898CA9);
-            /* font-family: Inter; */
-            font-size: 16px;
-            font-style: normal;
-            font-weight: 400;
-            line-height: 150%;
-
-        }
-
-        .choose-section {
-            margin-top: 18%;
-        }
-
-
-        .choose-section {
-            padding: 50px 0;
-        }
-
-
-        /* إعدادات عامة للبطاقات */
-        .choose-card {
-            border-radius: 25px;
-            background: var(--black-black-12, #1A1B23);
-            box-shadow: -2.01px 2.01px 20px 0px rgba(214, 214, 214, 0.17) inset, 3.01px -3.01px 3.013px 0px rgba(255, 255, 255, 0.39) inset;
-            transition: transform 0.4s ease, box-shadow 0.4s ease, border-color 0.4s ease;
-            overflow: hidden;
-        }
-
-        /* تأثير عند تمرير الماوس */
-        .choose-card:hover {
-            transform: scale(1.04) translateY(-3px);
-            box-shadow: 0 6px 18px rgba(80, 170, 56, 0.25);
-            border: 1.5px solid #5EBB47;
-        }
-
-        /* إعدادات الأيقونة */
-        .choose-card .icon-wrapper img {
-            width: 80px;
-            transition: filter 0.3s ease, transform 0.3s ease;
-        }
-
-        /* تغيير لون وحركة الأيقونة عند تمرير الماوس */
-        .choose-card:hover .icon-wrapper img {
-            filter: invert(0) brightness(1.1) sepia(1) hue-rotate(90deg) saturate(4);
-            transform: scale(1.1);
-        }
-
-        /* إعدادات النص */
-        .choose-card h5 {
-            color: #ffffff;
-            margin-top: 15px;
-            font-size: 1.4em;
-            transition: transform 0.3s ease;
-        }
-
-        .choose-card p {
-            color: #b0b0b0;
-            font-size: 0.9em;
-            transition: transform 0.3s ease;
-        }
-
-        /* حركة خفيفة للنص عند تمرير الماوس */
-        .choose-card:hover h5,
-        .choose-card:hover p {
-            transform: translateY(2px);
-        }
-
-        /* إعدادات عامة للقسم */
-        .invest-section {
-            color: #fff;
-            font-family: Arial, sans-serif;
-            text-align: center;
-        }
-
-        .section-title {
-            font-size: 2rem;
-            color: #90ee90;
-        }
-
-        .section-subtitle {
-            font-size: 1.2rem;
-            color: #ccc;
-            margin-bottom: 2rem;
-        }
-
-        /* قائمة الخيارات */
-        .list-group-item {
-            background: #1A1B23;
-            color: #ccc;
-            font-size: 1.2rem;
-            font-weight: 500;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 15px 20px;
-            border: 2px solid transparent;
-            margin-bottom: 10px;
-            transition: background-color 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
-            box-shadow: -1px 1px 10px 0 rgba(214, 214, 214, 0.17) inset, 2px -2px 2px 0 rgba(255, 255, 255, 0.39) inset;
-            border-radius: 15px;
-        }
-
-        /* إضافة حدود خضراء عند اختيار العنصر */
-        .list-group-item.active {
-            background: #5EBB47;
-            color: #fff;
-            border-color: #32cd32;
-            box-shadow: 0 0 8px rgba(50, 205, 50, 0.5),
-                inset 2px 2px 8px rgba(0, 0, 0, 0.2),
-                inset -2px -2px 8px rgba(255, 255, 255, 0.1);
-        }
-
-        /* تحسين الخطوط داخل العناصر */
-        .list-group-item .list-number {
-            font-size: 0.8rem;
-            color: #aaa;
-            margin-right: 10px;
-            position: relative;
-            top: -2px;
-            font-weight: 600;
-        }
-
-        .list-group-item.active .list-number {
-            color: #fff;
-        }
-
-        .list-group-item .arrow {
-            font-size: 1.2rem;
-            font-weight: bold;
-            color: #777;
-        }
-
-        .list-group-item.active .arrow {
-            color: #fff;
-        }
-
-        /* تأثير التفاعل */
-        .list-group-item:hover {
-            background-color: #5EBB47;
-            color: #fff;
-            border-color: #32cd32;
-            box-shadow: 0 0 10px rgba(50, 205, 50, 0.3),
-                inset 2px 2px 10px rgba(0, 0, 0, 0.2),
-                inset -2px -2px 10px rgba(255, 255, 255, 0.1);
-        }
-
-        /* تأثير الإنارة عند تمرير الماوس */
-        .list-group-item:hover {
-            border-color: #32cd32;
-            box-shadow: 0 0 10px 4px rgba(50, 205, 50, 0.4);
-        }
-
-        /* البطاقة الأساسية */
-        .content-card {
-            position: relative;
-            max-width: 500px;
-            margin: auto;
-            text-align: left;
-        }
-
-        /* الخلفية الخضراء */
-        .background-green {
-            position: absolute;
-            top: 15px;
-            left: 15px;
-            width: 100%;
-            height: 100%;
-            background: #5EBB47;
-            border-radius: 10px;
-            z-index: -2;
-        }
-
-        /* الحاوية المائلة */
-        .tilted-container {
-            position: relative;
-            background-color: #1e1e1e;
-            border: 2px solid #5EBB47;
-            border-radius: 10px;
-            padding: 15px;
-            transform: rotate(-5deg);
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5),
-                0 0 8px 2px rgba(50, 205, 50, 0.2);
-            z-index: -1;
-        }
-
-        /* الصورة داخل الحاوية */
-        .tilted-container img {
-            width: 100%;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-        }
-
-        /* النصوص داخل الحاوية */
-        .content-text {
-            margin-top: 10px;
-            font-size: 1rem;
-            color: #ddd;
-        }
-
-        .content-text h5 {
-            font-size: 1.5rem;
-            color: #90ee90;
-            margin-bottom: 10px;
-        }
-
-        /* السهم الأخضر الدائري */
-        .green-arrow {
-            position: absolute;
-            bottom: 15px;
-            right: 15px;
-            width: 35px;
-            height: 35px;
-            background-color: #32cd32;
-            color: #fff;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.5rem;
-        }
-
-        .fade-out {
-            opacity: 0;
-            transition: opacity 0.5s ease-out;
-        }
-
-        .fade-in {
-            opacity: 1;
-            transition: opacity 0.5s ease-in;
-        }
-
-        .list-group-item:first-child {
-            border-radius: 15px;
-            /* background: #5EBB47; */
-
-        }
-
-
-        .list-group-item:last-child {
-            border-radius: 15px;
-            /* background: #5EBB47; */
-
-        }
-
-
-        .fade-out {
-            opacity: 0;
-            transform: translateX(-20px);
-            transition: opacity 0.5s ease-out, transform 0.5s ease-out;
-        }
-
-        .fade-in {
-            opacity: 1;
-            transform: translateX(0);
-            transition: opacity 0.5s ease-in, transform 0.5s ease-in;
-        }
-    </style>
 </head>
 
 <body>
@@ -681,18 +160,28 @@
 
     <section class="invest-section py-5">
         <div class="container text-center">
-            <h2 class="section-title">Invest with us</h2>
+            <h2 class="mb-5 pb-3"> <span class="green-highlight"> Invest with us</span></h2>
+
             <p class="section-subtitle">"Invest with us in a variety of profitable projects that meet your financial
                 needs."</p>
 
             <div class="row">
                 <div class="col-md-4">
                     <div class="list-group">
-                        <button class="list-group-item active" data-target="#realEstate">01 Real Estate</button>
-                        <button class="list-group-item" data-target="#schools">02 Schools</button>
-                        <button class="list-group-item" data-target="#hospitals">03 Hospitals</button>
-                        <button class="list-group-item" data-target="#nightclubs">04 Nightclubs</button>
+                        <button class="list-group-item active" data-target="#realEstate">
+                            <span class="item-number">01</span> Real Estate
+                        </button>
+                        <button class="list-group-item" data-target="#schools">
+                            <span class="item-number">02</span> Schools
+                        </button>
+                        <button class="list-group-item" data-target="#hospitals">
+                            <span class="item-number">03</span> Hospitals
+                        </button>
+                        <button class="list-group-item" data-target="#nightclubs">
+                            <span class="item-number">04</span> Nightclubs
+                        </button>
                     </div>
+
                 </div>
                 <div class="col-md-8">
                     <div id="contentDisplay" class="content-card">
@@ -709,7 +198,16 @@
                                     <strong>Profit period:</strong> Long-term returns starting within 2-5 years.
                                 </p>
                             </div>
-                            <div class="green-arrow">→</div> <!-- السهم الأخضر الدائري -->
+                            <div class="green-arrow">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="52" height="52" viewBox="0 0 52 52"
+                                    fill="none">
+                                    <path d="M20.6796 17.7633L33.3975 15.749L35.4118 28.4668" stroke="#5EBB47"
+                                        stroke-width="2" stroke-miterlimit="10" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                    <path d="M18.409 36.3789L33.2476 15.9552" stroke="#5EBB47" stroke-width="2"
+                                        stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -717,9 +215,286 @@
         </div>
     </section>
 
+<!-- customers section -->
+    <div class="testimonial-section">
+        <h2 class="section-title">What our customers say about us !?</h2>
+        <div class="testimonial-container">
+            <!-- Testimonial Card 1 -->
+            <div class="testimonial-card">
+                <div class="card-header">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="41" height="25" viewBox="0 0 41 25" fill="none">
+                        <g clip-path="url(#clip0_84_7665)">
+                            <path
+                                d="M8.59157 0.737307C9.86662 0.737307 11.0416 1.43331 11.5916 2.51331L15.1416 9.32931C15.4916 10.0013 15.6666 10.7213 15.6666 11.4653V22.3373C15.6666 23.6573 14.5417 24.7373 13.1666 24.7373H3.16663C1.79168 24.7373 0.666626 23.6573 0.666626 22.3373V12.7373C0.666626 11.4173 1.79157 10.3373 3.16663 10.3373H8.16663L5.59157 5.39331C4.46663 3.25731 6.09157 0.737307 8.59157 0.737307ZM33.5916 0.737305C34.8666 0.737305 36.0416 1.4333 36.5916 2.51331L40.1416 9.32931C40.4916 10.0013 40.6666 10.7213 40.6666 11.4653L40.6666 22.3373C40.6666 23.6573 39.5416 24.7373 38.1666 24.7373H28.1666C26.7917 24.7373 25.6666 23.6573 25.6666 22.3373V12.7373C25.6666 11.4173 26.7916 10.3373 28.1666 10.3373H33.1666L30.5916 5.39331C29.4666 3.25731 31.0916 0.737305 33.5916 0.737305Z"
+                                fill="#9CA0AD" />
+                        </g>
+                        <defs>
+                            <clipPath id="clip0_84_7665">
+                                <rect width="40" height="24" fill="white"
+                                    transform="matrix(-1 0 0 1 40.6666 0.737305)" />
+                            </clipPath>
+                        </defs>
+                    </svg>
+                    <div class="user-info">
+                        <span class="user-name">Sarah Johnson</span>
+                        <span class="timestamp">1 day ago</span>
+                    </div>
+                </div>
+                <div class="rating-stars" id="rating-stars"></div>
+                <p class="testimonial-text">
+                    Since joining this platform, I have seen my investment grow significantly. The strategies are
+                    well-researched and easy to follow. I have more than doubled my funds in less than six months, and I
+                    couldn’t be happier with the results!
+                </p>
+            </div>
+
+            <!-- Testimonial Card 2 -->
+            <div class="testimonial-card">
+                <div class="card-header">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="41" height="25" viewBox="0 0 41 25" fill="none">
+                        <g clip-path="url(#clip0_84_7665)">
+                            <path
+                                d="M8.59157 0.737307C9.86662 0.737307 11.0416 1.43331 11.5916 2.51331L15.1416 9.32931C15.4916 10.0013 15.6666 10.7213 15.6666 11.4653V22.3373C15.6666 23.6573 14.5417 24.7373 13.1666 24.7373H3.16663C1.79168 24.7373 0.666626 23.6573 0.666626 22.3373V12.7373C0.666626 11.4173 1.79157 10.3373 3.16663 10.3373H8.16663L5.59157 5.39331C4.46663 3.25731 6.09157 0.737307 8.59157 0.737307ZM33.5916 0.737305C34.8666 0.737305 36.0416 1.4333 36.5916 2.51331L40.1416 9.32931C40.4916 10.0013 40.6666 10.7213 40.6666 11.4653L40.6666 22.3373C40.6666 23.6573 39.5416 24.7373 38.1666 24.7373H28.1666C26.7917 24.7373 25.6666 23.6573 25.6666 22.3373V12.7373C25.6666 11.4173 26.7916 10.3373 28.1666 10.3373H33.1666L30.5916 5.39331C29.4666 3.25731 31.0916 0.737305 33.5916 0.737305Z"
+                                fill="#9CA0AD" />
+                        </g>
+                        <defs>
+                            <clipPath id="clip0_84_7665">
+                                <rect width="40" height="24" fill="white"
+                                    transform="matrix(-1 0 0 1 40.6666 0.737305)" />
+                            </clipPath>
+                        </defs>
+                    </svg>
+                    <div class="user-info">
+                        <span class="user-name">Michael Brown</span>
+                        <span class="timestamp">2 days ago</span>
+                    </div>
+                </div>
+                <div class="rating-stars" id="rating-stars"></div>
+                <p class="testimonial-text">
+                    I have always been skeptical about online investment platforms, but this one has proven to be a game
+                    changer for me. With their expert advice and user-friendly tools, I have managed to turn a
+                    significant profit and feel secure in my investments.
+                </p>
+            </div>
+
+            <!-- Testimonial Card 3 -->
+            <div class="testimonial-card">
+                <div class="card-header">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="41" height="25" viewBox="0 0 41 25" fill="none">
+                        <g clip-path="url(#clip0_84_7665)">
+                            <path
+                                d="M8.59157 0.737307C9.86662 0.737307 11.0416 1.43331 11.5916 2.51331L15.1416 9.32931C15.4916 10.0013 15.6666 10.7213 15.6666 11.4653V22.3373C15.6666 23.6573 14.5417 24.7373 13.1666 24.7373H3.16663C1.79168 24.7373 0.666626 23.6573 0.666626 22.3373V12.7373C0.666626 11.4173 1.79157 10.3373 3.16663 10.3373H8.16663L5.59157 5.39331C4.46663 3.25731 6.09157 0.737307 8.59157 0.737307ZM33.5916 0.737305C34.8666 0.737305 36.0416 1.4333 36.5916 2.51331L40.1416 9.32931C40.4916 10.0013 40.6666 10.7213 40.6666 11.4653L40.6666 22.3373C40.6666 23.6573 39.5416 24.7373 38.1666 24.7373H28.1666C26.7917 24.7373 25.6666 23.6573 25.6666 22.3373V12.7373C25.6666 11.4173 26.7916 10.3373 28.1666 10.3373H33.1666L30.5916 5.39331C29.4666 3.25731 31.0916 0.737305 33.5916 0.737305Z"
+                                fill="#9CA0AD" />
+                        </g>
+                        <defs>
+                            <clipPath id="clip0_84_7665">
+                                <rect width="40" height="24" fill="white"
+                                    transform="matrix(-1 0 0 1 40.6666 0.737305)" />
+                            </clipPath>
+                        </defs>
+                    </svg>
+                    <div class="user-info">
+                        <span class="user-name">Emma Wilson</span>
+                        <span class="timestamp">3 days ago</span>
+                    </div>
+                </div>
+                <div class="rating-stars" id="rating-stars"></div>
+                <p class="testimonial-text">
+                    My experience with this investment platform has been exceptional. The support team is always
+                    available to help, and the resources provided have allowed me to maximize my returns. I’ve not only
+                    doubled my investment but have also learned a great deal along the way.
+                </p>
+            </div>
+
+            <!-- Testimonial Card 4 -->
+            <div class="testimonial-card">
+                <div class="card-header">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="41" height="25" viewBox="0 0 41 25" fill="none">
+                        <g clip-path="url(#clip0_84_7665)">
+                            <path
+                                d="M8.59157 0.737307C9.86662 0.737307 11.0416 1.43331 11.5916 2.51331L15.1416 9.32931C15.4916 10.0013 15.6666 10.7213 15.6666 11.4653V22.3373C15.6666 23.6573 14.5417 24.7373 13.1666 24.7373H3.16663C1.79168 24.7373 0.666626 23.6573 0.666626 22.3373V12.7373C0.666626 11.4173 1.79157 10.3373 3.16663 10.3373H8.16663L5.59157 5.39331C4.46663 3.25731 6.09157 0.737307 8.59157 0.737307ZM33.5916 0.737305C34.8666 0.737305 36.0416 1.4333 36.5916 2.51331L40.1416 9.32931C40.4916 10.0013 40.6666 10.7213 40.6666 11.4653L40.6666 22.3373C40.6666 23.6573 39.5416 24.7373 38.1666 24.7373H28.1666C26.7917 24.7373 25.6666 23.6573 25.6666 22.3373V12.7373C25.6666 11.4173 26.7916 10.3373 28.1666 10.3373H33.1666L30.5916 5.39331C29.4666 3.25731 31.0916 0.737305 33.5916 0.737305Z"
+                                fill="#9CA0AD" />
+                        </g>
+                        <defs>
+                            <clipPath id="clip0_84_7665">
+                                <rect width="40" height="24" fill="white"
+                                    transform="matrix(-1 0 0 1 40.6666 0.737305)" />
+                            </clipPath>
+                        </defs>
+                    </svg>
+                    <div class="user-info">
+                        <span class="user-name">David Lee</span>
+                        <span class="timestamp">4 days ago</span>
+                    </div>
+                </div>
+                <div class="rating-stars" id="rating-stars"></div>
+                <p class="testimonial-text">
+                    This platform has exceeded my expectations in every way. The investment tools are incredibly
+                    effective, and I feel confident in my trading decisions. My portfolio has grown by leaps and bounds
+                    since I joined, and I trust this platform completely.
+                </p>
+            </div>
+
+            <!-- Testimonial Card 5 -->
+            <div class="testimonial-card">
+                <div class="card-header">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="41" height="25" viewBox="0 0 41 25" fill="none">
+                        <g clip-path="url(#clip0_84_7665)">
+                            <path
+                                d="M8.59157 0.737307C9.86662 0.737307 11.0416 1.43331 11.5916 2.51331L15.1416 9.32931C15.4916 10.0013 15.6666 10.7213 15.6666 11.4653V22.3373C15.6666 23.6573 14.5417 24.7373 13.1666 24.7373H3.16663C1.79168 24.7373 0.666626 23.6573 0.666626 22.3373V12.7373C0.666626 11.4173 1.79157 10.3373 3.16663 10.3373H8.16663L5.59157 5.39331C4.46663 3.25731 6.09157 0.737307 8.59157 0.737307ZM33.5916 0.737305C34.8666 0.737305 36.0416 1.4333 36.5916 2.51331L40.1416 9.32931C40.4916 10.0013 40.6666 10.7213 40.6666 11.4653L40.6666 22.3373C40.6666 23.6573 39.5416 24.7373 38.1666 24.7373H28.1666C26.7917 24.7373 25.6666 23.6573 25.6666 22.3373V12.7373C25.6666 11.4173 26.7916 10.3373 28.1666 10.3373H33.1666L30.5916 5.39331C29.4666 3.25731 31.0916 0.737305 33.5916 0.737305Z"
+                                fill="#9CA0AD" />
+                        </g>
+                        <defs>
+                            <clipPath id="clip0_84_7665">
+                                <rect width="40" height="24" fill="white"
+                                    transform="matrix(-1 0 0 1 40.6666 0.737305)" />
+                            </clipPath>
+                        </defs>
+                    </svg>
+                    <div class="user-info">
+                        <span class="user-name">Jessica Taylor</span>
+                        <span class="timestamp">5 days ago</span>
+                    </div>
+                </div>
+                <div class="rating-stars" id="rating-stars"></div>
+                <p class="testimonial-text">
+                    My time with this investment platform has been nothing short of fantastic. Their guidance and
+                    analysis have allowed me to make informed decisions, leading to a steady increase in my investments.
+                    I highly recommend it to anyone looking to grow their wealth.
+                </p>
+            </div>
+
+        </div>
+
+
+        <!-- Navigation Arrows -->
+        <div class="arrow left-arrow">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
+                <path
+                    d="M21.75 19.4526C21.75 16.4493 21.0731 14.0498 19.7386 12.3154C18.127 10.2215 15.5817 9.09184 12.1655 8.95215V4.1123L2.25 12.5498L12.1655 20.9873V16.1756C14.2397 16.2314 15.8058 16.5309 17.0531 17.1056C18.4008 17.7267 19.3781 18.6548 20.4319 19.8571L21.75 21.3623V19.4526Z"
+                    class="arrow-path left-arrow-path" fill="url(#paint0_linear_84_7713)" />
+                <defs>
+                    <linearGradient id="paint0_linear_84_7713" x1="2.25" y1="4.1123" x2="22.8658" y2="5.56886"
+                        gradientUnits="userSpaceOnUse">
+                        <stop stop-color="#5EBB47" />
+                        <stop offset="1" stop-color="white" />
+                    </linearGradient>
+                    <linearGradient id="paint-hover-left" x1="2.25" y1="4.1123" x2="22.8658" y2="5.56886"
+                        gradientUnits="userSpaceOnUse">
+                        <stop stop-color="#3E8B3A" /> <!-- لون داكن -->
+                        <stop offset="1" stop-color="#B0B0B0" /> <!-- اللون الرمادي -->
+                    </linearGradient>
+                </defs>
+            </svg>
+        </div>
+        <div class="arrow right-arrow">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
+                <path
+                    d="M2.25 19.4526C2.25 16.4493 2.92688 14.0498 4.26141 12.3154C5.87297 10.2215 8.41828 9.09184 11.8345 8.95215V4.1123L21.75 12.5498L11.8345 20.9873V16.1756C9.76031 16.2314 8.19422 16.5309 6.94687 17.1056C5.59922 17.7267 4.62188 18.6548 3.56813 19.8571L2.25 21.3623V19.4526Z"
+                    class="arrow-path right-arrow-path" fill="url(#paint0_linear_84_7713)" />
+                <defs>
+                    <linearGradient id="paint0_linear_84_7713" x1="2.25" y1="4.1123" x2="22.8658" y2="5.56886"
+                        gradientUnits="userSpaceOnUse">
+                        <stop stop-color="#5EBB47" />
+                        <stop offset="1" stop-color="white" />
+                    </linearGradient>
+                    <linearGradient id="paint-hover-right" x1="2.25" y1="4.1123" x2="22.8658" y2="5.56886"
+                        gradientUnits="userSpaceOnUse">
+                        <stop stop-color="#3E8B3A" /> <!-- لون داكن -->
+                        <stop offset="1" stop-color="#B0B0B0" /> <!-- اللون الرمادي -->
+                    </linearGradient>
+                </defs>
+            </svg>
+        </div>
+
+    </div>
+
+
 
     <script src="script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        if (!localStorage.getItem('ratings')) {
+            const initialRatings = [4, 4.5, 5];
+            localStorage.setItem('ratings', JSON.stringify(initialRatings));
+        }
+
+        const ratings = JSON.parse(localStorage.getItem('ratings'));
+
+        function setStars(rating, element) {
+            const starContainer = document.createElement('div');
+            starContainer.style.display = 'flex';
+            for (let i = 1; i <= 5; i++) {
+                const star = document.createElement('span');
+                star.classList.add('star');
+                star.style.width = '22px';
+                star.style.height = '22px';
+                star.style.display = 'inline-block';
+                if (i <= Math.floor(rating)) {
+                    star.style.background = 'var(--linear, linear-gradient(94deg, #5EBB47 0%, #414042 100%))'; // لون النجمة الممتلئة
+                } else if (i === Math.ceil(rating)) {
+                    star.style.background = 'linear-gradient(94deg, #5EBB47 0%, #414042 100%)'; // لون النجمة النصف ممتلئة
+                } else {
+                    star.style.background = '#9CA0AD'; // لون النجمة الفارغة
+                }
+                star.style.clipPath = 'polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%)'; // شكل النجمة
+                starContainer.appendChild(star);
+            }
+            element.appendChild(starContainer);
+        }
+
+        // استدعاء تابع تعيين النجوم لكل شهادة
+        document.querySelectorAll('.testimonial-card').forEach((card, index) => {
+            const ratingStars = card.querySelector('.rating-stars');
+            const rating = ratings[index % ratings.length]; // استخدام التقييمات من المصفوفة
+            setStars(rating, ratingStars);
+        });
+
+
+
+
+        let currentIndex = 0; // تتبع الفهرس الحالي للبطاقات
+        const cards = document.querySelectorAll('.testimonial-card'); // اختيار جميع البطاقات
+        const totalCards = cards.length;
+        const leftArrow = document.querySelector('.left-arrow');
+        const rightArrow = document.querySelector('.right-arrow');
+
+        function updateCardsPosition() {
+            cards.forEach((card, index) => {
+                card.style.display = 'none'; // إخفاء جميع البطاقات
+                if (index >= currentIndex && index < currentIndex + 3) {
+                    card.style.display = 'block'; // إظهار 3 بطاقات في النطاق
+                }
+            });
+
+            // تحديث حالة الأسهم
+            leftArrow.classList.toggle('disabled', currentIndex === 0);
+            rightArrow.classList.toggle('disabled', currentIndex >= totalCards - 3);
+        }
+
+        // تغيير اللون عند النقر
+        leftArrow.addEventListener('click', () => {
+            if (currentIndex > 0) {
+                currentIndex--;
+                updateCardsPosition();
+                leftArrow.style.fill = "#0056b3"; // لون عند النقر
+                setTimeout(() => leftArrow.style.fill = "", 300); // إعادة اللون بعد فترة
+            }
+        });
+
+        rightArrow.addEventListener('click', () => {
+            if (currentIndex < totalCards - 3) {
+                currentIndex++;
+                updateCardsPosition();
+                rightArrow.style.fill = "#0056b3"; // لون عند النقر
+                setTimeout(() => rightArrow.style.fill = "", 300); // إعادة اللون بعد فترة
+            }
+        });
+
+        // إعداد أولي للبطاقات
+        updateCardsPosition();
+    </script>
 
 
 </body>

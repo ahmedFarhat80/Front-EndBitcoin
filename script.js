@@ -6,15 +6,15 @@ document.querySelectorAll('.list-group-item').forEach(item => {
         this.classList.add('active');
 
         // اختيار العناصر التي سيتم تحديثها
-        const contentCard = document.getElementById('contentDisplay');
+        const tiltedContainer = document.querySelector('.tilted-container');
         const title = document.getElementById('contentTitle');
         const description = document.getElementById('contentDescription');
         const image = document.getElementById('contentImage');
 
-        // تطبيق تأثير التلاشي للخروج
-        contentCard.classList.add('fade-out');
+        // إضافة حركة slide-out إلى البطاقة الحالية
+        tiltedContainer.classList.add('slide-out');
 
-        // بعد انتهاء التلاشي للخروج، نحدث المحتوى ثم نطبق تأثير الدخول
+        // بعد انتهاء حركة slide-out، نقوم بتحديث المحتوى وتطبيق slide-in
         setTimeout(() => {
             // تحديث المحتوى بناءً على الزر المضغوط
             const target = this.getAttribute('data-target');
@@ -36,12 +36,12 @@ document.querySelectorAll('.list-group-item').forEach(item => {
                 image.src = 'images/nightclubs.jpg';
             }
 
-            // إزالة تأثير التلاشي للخروج وتطبيق التلاشي للدخول
-            contentCard.classList.remove('fade-out');
-            contentCard.classList.add('fade-in');
+            // إزالة حركة slide-out وإضافة slide-in للبطاقة الجديدة
+            tiltedContainer.classList.remove('slide-out');
+            tiltedContainer.classList.add('slide-in');
 
-            // إزالة fade-in بعد انتهاء الانتقال بحيث يعاد تطبيقه عند الانتقال مرة أخرى
-            setTimeout(() => contentCard.classList.remove('fade-in'), 500);
-        }, 500);
+            // إزالة slide-in بعد انتهاء الأنميشن لإعادة تعيين الحركة
+            setTimeout(() => tiltedContainer.classList.remove('slide-in'), 500);
+        }, 500); // يجب أن يتزامن مع مدة slide-out
     });
 });

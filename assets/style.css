@@ -14,20 +14,15 @@ body {
 
 ::-webkit-scrollbar-track {
     background: #1c1c1c;
-    /* لون خلفية شريط التمرير */
 }
 
 ::-webkit-scrollbar-thumb {
     background: #5EBB47;
-    /* لون شريط التمرير */
     border-radius: 10px;
-    /* زوايا دائرية لشريط التمرير */
 }
 
-/* تغيير لون الشريط عند التمرير */
 ::-webkit-scrollbar-thumb:hover {
     background: #4b9e3c;
-    /* لون أغمق عند تمرير الماوس فوقه */
 }
 
 
@@ -213,4 +208,763 @@ body {
         opacity: 1;
         /* شفافية الضوء في المنتصف */
     }
+}
+
+
+body {
+    position: relative;
+}
+
+.galaxy-background {
+    height: 194vh;
+    width: 100%;
+    background-image: url("./image/circles.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -2;
+}
+
+.svg-element {
+    position: absolute;
+    width: 10vw;
+    transition: transform 0.3s;
+}
+
+.planet1 {
+    top: 13%;
+    left: 10%;
+}
+
+.planet-1 {
+    top: 39%;
+    left: 6%;
+}
+
+.planet2 {
+    top: 56%;
+    left: 13%;
+}
+
+.planet3 {
+    top: 24%;
+    left: 80%;
+}
+
+.planet4 {
+    top: 50%;
+    left: 75%;
+}
+
+.lefit-star {
+    width: 4vw !important;
+    top: 20%;
+    left: 20%;
+}
+
+.right-star {
+    width: 5vw !important;
+    top: 11%;
+    left: 80%;
+}
+
+.right-sm-star {
+    width: 3vw !important;
+    top: 22%;
+    left: 90%;
+}
+
+.right-sm2-star {
+    width: 4vw !important;
+    top: 62%;
+    left: 87%;
+}
+
+.star-img-left {
+    width: 3.5vw !important;
+    top: 1170px;
+    left: 9%;
+}
+
+.star-img-why {
+    width: 3.5vw !important;
+    top: 2170px;
+    left: 1.3%;
+}
+
+.star-img-why-2 {
+    width: 2.5vw !important;
+    top: 2080px;
+    left: 4%;
+}
+
+.green {
+    /* width: 3vw !important; */
+    top: 45%;
+    left: 90%;
+}
+
+.overlay-section {
+    margin-top: 37%;
+}
+
+.glass {
+    width: 5.8vw !important;
+    top: 25.5%;
+    left: 37.5%;
+
+}
+
+.light-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: -3;
+}
+
+.top-green-light {
+    background: linear-gradient(180deg, rgba(24, 255, 158, 0) 0%, #64E726 100%);
+    width: 200px;
+    height: 200px;
+    top: 195px;
+    left: 195px;
+    border-radius: 50%;
+    filter: blur(60px);
+    animation: pulse-light 3s ease-in-out infinite;
+    z-index: -3;
+    position: absolute;
+
+}
+
+.top-blue-light {
+    position: absolute;
+    background: #184BFF66;
+    width: 350px;
+    height: 350px;
+    top: 30px;
+    left: 100px;
+    border-radius: 50%;
+    filter: blur(100px);
+    animation: pulse-light 3s ease-in-out infinite;
+    z-index: -3;
+}
+
+
+.purple-light {
+    background: linear-gradient(180deg, rgba(0, 194, 255, 0) 0%, #DB0DA1 100%);
+    width: 300px;
+    height: 300px;
+    top: 500px;
+    right: 105px;
+    border-radius: 50%;
+    filter: blur(100px);
+    animation: pulse-light 3s ease-in-out infinite;
+    z-index: -3;
+    position: absolute;
+}
+
+.purple-blue-light {
+    background: #184BFF66;
+    width: 300px;
+    height: 300px;
+    top: 400px;
+    right: 1px;
+    border-radius: 50%;
+    filter: blur(100px);
+    animation: pulse-light 3s ease-in-out infinite;
+    z-index: -3;
+    position: absolute;
+}
+
+.left-green-light {
+    background: linear-gradient(180deg, rgba(24, 255, 158, 0) 0%, #64E726 100%);
+    width: 450px;
+    height: 450px;
+    top: 1120px;
+    left: -100px;
+    border-radius: 50%;
+    filter: blur(180px);
+    animation: pulse-light 3s ease-in-out infinite;
+    z-index: -3;
+    position: absolute;
+}
+
+.left-white-light {
+    background: linear-gradient(180deg, rgba(24, 255, 158, 0) 0%, #ffffff 100%);
+    width: 350px;
+    height: 350px;
+    top: 1000px;
+    left: -100px;
+    border-radius: 50%;
+    filter: blur(150px);
+    animation: pulse-light 3s ease-in-out infinite;
+    z-index: -3;
+    position: absolute;
+}
+
+.purple-green-light {
+    background: linear-gradient(180deg, rgba(24, 255, 158, 0) 0%, #64E726 100%);
+    width: 300px;
+    height: 300px;
+    top: 600px;
+    right: 1px;
+    border-radius: 50%;
+    filter: blur(100px);
+    animation: pulse-light 3s ease-in-out infinite;
+    z-index: -3;
+    position: absolute;
+}
+
+
+.overlay-section h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: white;
+    line-height: 1.2;
+}
+
+
+.overlay-section h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    background: linear-gradient(180deg, #FFFFFF, #5EBB47);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    position: relative;
+    text-shadow:
+        1px 1px 1px rgba(200, 200, 200, 0.6),
+        0 0 3px rgba(80, 170, 56, 0.4),
+        0 0 5px rgba(80, 150, 61, 0.3),
+        0 0 8px rgba(80, 150, 61, 0.2);
+
+}
+
+
+.overlay-section h2::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: inherit;
+    filter: blur(8px);
+    /* ضبابية للحصول على تأثير الزجاج */
+    z-index: -1;
+    opacity: 0.7;
+    /* شفافية خفيفة للزجاج */
+}
+
+.green-highlight {
+    font-size: 2.5rem;
+    font-weight: bold;
+    background-image:
+        radial-gradient(circle at 20% 30%, #FFFFFF, transparent 80%),
+        linear-gradient(120deg, #5bb145, #FFFFFF);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    position: relative;
+    text-shadow:
+        1px 1px 1px rgba(255, 255, 255, 0.111),
+        0 0 3px rgba(77, 190, 46, 0.4),
+        0 0 5px rgba(44, 132, 20, 0.3),
+        0 0 8px rgba(80, 150, 61, 0.2);
+}
+
+
+.text-lead {
+    color: var(--black-black-60, #898CA9);
+    /* font-family: Inter; */
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+
+}
+
+.choose-section {
+    margin-top: 18%;
+}
+
+
+.choose-section {
+    padding: 50px 0;
+}
+
+
+/* إعدادات عامة للبطاقات */
+.choose-card {
+    border-radius: 25px;
+    background: var(--black-black-12, #1A1B23);
+    box-shadow: -2.01px 2.01px 20px 0px rgba(214, 214, 214, 0.17) inset, 3.01px -3.01px 3.013px 0px rgba(255, 255, 255, 0.39) inset;
+    transition: transform 0.4s ease, box-shadow 0.4s ease, border-color 0.4s ease;
+    overflow: hidden;
+}
+
+/* تأثير عند تمرير الماوس */
+.choose-card:hover {
+    transform: scale(1.04) translateY(-3px);
+    box-shadow: 0 6px 18px rgba(80, 170, 56, 0.25);
+    border: 1.5px solid #5EBB47;
+}
+
+/* إعدادات الأيقونة */
+.choose-card .icon-wrapper img {
+    width: 80px;
+    transition: filter 0.3s ease, transform 0.3s ease;
+}
+
+/* تغيير لون وحركة الأيقونة عند تمرير الماوس */
+.choose-card:hover .icon-wrapper img {
+    filter: invert(0) brightness(1.1) sepia(1) hue-rotate(90deg) saturate(4);
+    transform: scale(1.1);
+}
+
+/* إعدادات النص */
+.choose-card h5 {
+    color: #ffffff;
+    margin-top: 15px;
+    font-size: 1.4em;
+    transition: transform 0.3s ease;
+}
+
+.choose-card p {
+    color: #b0b0b0;
+    font-size: 0.9em;
+    transition: transform 0.3s ease;
+}
+
+/* حركة خفيفة للنص عند تمرير الماوس */
+.choose-card:hover h5,
+.choose-card:hover p {
+    transform: translateY(2px);
+}
+
+/* إعدادات عامة للقسم */
+.invest-section {
+    color: #fff;
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+.section-title {
+    font-size: 2rem;
+    color: #90ee90;
+}
+
+.section-subtitle {
+    font-size: 1.2rem;
+    color: #ccc;
+    margin-bottom: 2rem;
+}
+
+/* قائمة الخيارات */
+.list-group-item {
+    background: #1A1B23;
+    color: #ccc;
+    font-size: 1.2rem;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    padding: 15px 20px;
+    border: 2px solid transparent;
+    margin-bottom: 10px;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    box-shadow: -1px 1px 10px 0 rgba(214, 214, 214, 0.17) inset, 2px -2px 2px 0 rgba(255, 255, 255, 0.39) inset;
+    border-radius: 15px;
+}
+
+/* إضافة حدود خضراء عند اختيار العنصر */
+.list-group-item.active {
+    background: #5EBB47;
+    color: #fff;
+    border-color: #32cd32;
+    box-shadow: 0 0 8px rgba(50, 205, 50, 0.5),
+        inset 2px 2px 8px rgba(0, 0, 0, 0.2),
+        inset -2px -2px 8px rgba(255, 255, 255, 0.1);
+}
+
+/* تحسين الخطوط داخل العناصر */
+.list-group-item .list-number {
+    font-size: 0.8rem;
+    color: #aaa;
+    margin-right: 10px;
+    position: relative;
+    top: -2px;
+    font-weight: 600;
+}
+
+.list-group-item.active .list-number {
+    color: #fff;
+}
+
+.list-group-item .arrow {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #777;
+}
+
+.list-group-item.active .arrow {
+    color: #fff;
+}
+
+/* تأثير التفاعل */
+.list-group-item:hover {
+    background-color: #5EBB47;
+    color: #fff;
+    border-color: #32cd32;
+    box-shadow: 0 0 10px rgba(50, 205, 50, 0.3),
+        inset 2px 2px 10px rgba(0, 0, 0, 0.2),
+        inset -2px -2px 10px rgba(255, 255, 255, 0.1);
+}
+
+/* تأثير الإنارة عند تمرير الماوس */
+.list-group-item:hover {
+    border-color: #32cd32;
+    box-shadow: 0 0 10px 4px rgba(50, 205, 50, 0.4);
+}
+
+/* البطاقة الأساسية */
+.content-card {
+    position: relative;
+    max-width: 500px;
+    margin: auto;
+    text-align: left;
+}
+
+/* الخلفية الخضراء */
+.background-green {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    width: 100%;
+    height: 100%;
+    background: #5EBB47;
+    border-radius: 10px;
+    z-index: -2;
+}
+
+/* الحاوية المائلة */
+.tilted-container {
+    position: relative;
+    background-color: #1e1e1e;
+    border: 2px solid #5EBB47;
+    border-radius: 10px;
+    padding: 15px;
+    transform: rotate(-5deg);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5),
+        0 0 8px 2px rgba(50, 205, 50, 0.2);
+    z-index: -1;
+}
+
+/* الصورة داخل الحاوية */
+.tilted-container img {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* النصوص داخل الحاوية */
+.content-text {
+    margin-top: 10px;
+    font-size: 1rem;
+    color: #ddd;
+}
+
+.content-text h5 {
+    font-size: 1.5rem;
+    color: #90ee90;
+    margin-bottom: 10px;
+}
+
+.green-arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 52px;
+    height: 52px;
+    border-radius: 30px;
+    border: 2px solid #5EBB47;
+    background-color: transparent;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    margin-left: auto;
+}
+
+.item-number {
+    margin: none;
+    padding: none;
+    font-size: 0.6em;
+    /* جعل الحجم أصغر */
+    vertical-align: super;
+    /* محاذاة الرقم لأعلى */
+    margin-right: 0.5em;
+    /* مسافة بين الرقم والنص */
+    position: relative;
+    /* يسمح بتحكم أفضل في المحاذاة */
+    top: -0.3em;
+    /* اضبط هذه القيمة لرفع الرقم قليلًا */
+    color: inherit;
+    /* يجعل اللون وراثيًا من النص */
+}
+
+
+.green-arrow:hover {
+    transform: scale(1.1);
+    /* تكبير بسيط عند تمرير الماوس */
+}
+
+
+.fade-out {
+    opacity: 0;
+    transition: opacity 0.5s ease-out;
+}
+
+.fade-in {
+    opacity: 1;
+    transition: opacity 0.5s ease-in;
+}
+
+.list-group-item:first-child {
+    border-radius: 15px;
+    /* background: #5EBB47; */
+
+}
+
+
+.list-group-item:last-child {
+    border-radius: 15px;
+    /* background: #5EBB47; */
+
+}
+
+
+.fade-out {
+    opacity: 0;
+    transform: translateX(-20px);
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.fade-in {
+    opacity: 1;
+    transform: translateX(0);
+    transition: opacity 0.5s ease-in, transform 0.5s ease-in;
+}
+
+
+
+
+/* Animation for old card fading out and shrinking back */
+@keyframes slide-out {
+    0% {
+        transform: scale(1) translateZ(0);
+        opacity: 1;
+    }
+
+    100% {
+        transform: scale(0.9) translateZ(-30px);
+        /* Shrinks and moves backward */
+        opacity: 0;
+    }
+}
+
+/* Animation for new card sliding in and enlarging */
+@keyframes slide-in {
+    0% {
+        transform: scale(0.9) translateZ(-30px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: scale(1) translateZ(0);
+        /* Expands to original size */
+        opacity: 1;
+    }
+}
+
+.tilted-container.slide-out {
+    animation: slide-out 0.5s ease forwards;
+    position: relative;
+    z-index: 0;
+    /* Move the old card backward */
+}
+
+.tilted-container.slide-in {
+    animation: slide-in 0.5s ease forwards;
+    position: relative;
+    z-index: 1;
+    /* Move the new card forward */
+}
+
+
+
+
+
+
+
+
+
+
+.testimonial-section {
+    padding: 50px;
+    text-align: center;
+    position: relative;
+    /* background: linear-gradient(180deg, rgba(11, 15, 26, 0.80) 0%, #1A2A1F 100%); */
+}
+
+.section-title {
+    font-size: 28px;
+    font-weight: bold;
+    color: #a9f1a9;
+    margin-bottom: 30px;
+}
+
+.testimonial-container {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.testimonial-card {
+    padding: 24px;
+    width: 380px;
+    /* Increased width as per reference */
+    color: #ffffff;
+    position: relative;
+    border-radius: 12px;
+    background: #1A1B23;
+    box-shadow: -2.01px 2.01px 20px 0px rgba(214, 214, 214, 0.17) inset,
+        3.01px -3.01px 3.013px 0px rgba(255, 255, 255, 0.39) inset;
+}
+
+.card-header {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    margin-bottom: 16px;
+}
+
+.user-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.user-name {
+    color: #FFF;
+    font-family: Inter, sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.timestamp {
+    color: rgba(255, 255, 255, 0.71);
+    font-family: Inter, sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.rating-stars {
+    display: flex;
+    gap: 5px;
+    margin: 16px 0;
+}
+
+.testimonial-text {
+    font-size: 14px;
+    color: #cfcfcf;
+    text-align: left;
+    line-height: 1.6;
+}
+
+.arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+}
+
+.left-arrow {
+    left: 20px;
+}
+
+.right-arrow {
+    right: 20px;
+}
+
+.testimonial-container {
+    position: relative;
+    overflow: hidden;
+    /* Hide overflow */
+    width: 100%;
+    display: flex;
+
+}
+
+.testimonial-slider {
+    display: flex;
+    transition: transform 0.3s ease;
+}
+
+.testimonial-card {
+    min-width: 300px;
+    margin-right: 20px;
+}
+
+.left-arrow,
+.right-arrow {
+    cursor: pointer;
+    transition: fill 0.3s;
+    /* تأثير الانتقال الناعم لتغيير اللون */
+}
+
+.left-arrow:hover,
+.right-arrow:hover {
+    fill: #007bff;
+    /* تغيير لون التعبئة عند التمرير */
+}
+
+.left-arrow.disabled,
+.right-arrow.disabled {
+    fill: #ccc;
+    /* اللون الرمادي للأسهم المعطلة */
+    cursor: not-allowed;
+    /* تغيير المؤشر ليظهر كغير متاح */
+}
+
+
+.arrow {
+    cursor: pointer;
+    transition: fill 0.3s ease;
+}
+
+.arrow.disabled .arrow-path {
+    fill: white;
+    fill-opacity: 0.6;
+    /* اللون عندما يكون السهم معطلاً */
+}
+
+.arrow:not(.disabled):hover .arrow-path {
+    fill: url(#paint-hover-left);
+    /* تدرج لوني داكن للسهم الأيسر */
+}
+
+.arrow.right-arrow:not(.disabled):hover .arrow-path {
+    fill: url(#paint-hover-right);
+    /* تدرج لوني داكن للسهم الأيمن */
 }

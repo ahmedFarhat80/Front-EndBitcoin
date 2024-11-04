@@ -3,450 +3,200 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FundX</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <title>FundX - Your Gateway to Investing</title>
+    <!-- <link rel="stylesheet" href="assets/style.css"> -->
     <style>
-        :root {
-            --primary-color: #36F1CD;
-            --bg-dark: #000000;
-        }
+        /* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    color: #ccc;
+    background-color: #1A1B23;
+}
 
-        body {
-            background: linear-gradient(180deg, var(--bg-dark) 0%, #041611 100%);
-            color: white;
-            font-family: 'Inter', sans-serif;
-            min-height: 100vh;
-        }
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #1A1B23;
+}
 
-        /* Navigation */
-        .navbar {
-            padding: 1rem 0;
-            background: transparent;
-        }
+.logo {
+    color: #5EBB47;
+    font-size: 1.5em;
+    font-weight: bold;
+}
 
-        .logo {
-            color: var(--primary-color);
-            font-size: 24px;
-            font-weight: bold;
-            text-decoration: none;
-        }
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: 60px 20px;
+    color: #ffffff;
+}
 
-        .nav-link {
-            color: #ffffff !important;
-            margin: 0 15px;
-        }
+.hero h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
 
-        .btn-sign-up {
-            background: var(--primary-color);
-            color: #000 !important;
-            padding: 8px 24px;
-            border-radius: 8px;
-            text-decoration: none;
-        }
+.hero p {
+    font-size: 1.2em;
+}
 
-        /* Hero Section */
-        .hero {
-            padding: 80px 0;
-            position: relative;
-        }
+.get-started {
+    background-color: #5EBB47;
+    color: #ffffff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
 
-        .hero h1 {
-            font-size: 64px;
-            font-weight: bold;
-            line-height: 1.2;
-            margin-bottom: 20px;
-        }
+/* Shapes */
+.background-graphics .shape {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: linear-gradient(145deg, #7df77d, #2ab02a);
+}
 
-        .hero p {
-            color: #A3A3A3;
-            font-size: 18px;
-            margin-bottom: 30px;
-        }
+/* Why Choose Us Section */
+.why-choose-us {
+    padding: 40px 20px;
+    text-align: center;
+}
 
-        .btn-get-started {
-            background: var(--primary-color);
-            color: #000;
-            padding: 12px 32px;
-            border-radius: 8px;
-            border: none;
-            font-weight: 600;
-        }
+.features {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+}
 
-        /* Welcome Section */
-        .welcome {
-            padding: 60px 0;
-        }
+/* More sections styling... */
 
-        .welcome h2 {
-            font-size: 36px;
-            margin-bottom: 20px;
-        }
-
-        .welcome span {
-            color: var(--primary-color);
-        }
-
-        /* Features Section */
-        .features {
-            padding: 60px 0;
-        }
-
-        .features h2 {
-            color: var(--primary-color);
-            margin-bottom: 40px;
-        }
-
-        .feature-card {
-            background: rgba(255, 255, 255, 0.05);
-            border-radius: 16px;
-            padding: 24px;
-            height: 100%;
-            backdrop-filter: blur(10px);
-        }
-
-        /* Investment Section */
-        .investment {
-            padding: 60px 0;
-        }
-
-        .investment h3 {
-            color: var(--primary-color);
-            margin-bottom: 30px;
-        }
-
-        .investment-option {
-            background: rgba(255, 255, 255, 0.05);
-            border-radius: 12px;
-            padding: 16px 24px;
-            margin-bottom: 12px;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
-
-        .investment-option.active {
-            background: var(--primary-color);
-            color: #000;
-        }
-
-        .investment-preview {
-            background: rgba(255, 255, 255, 0.05);
-            border-radius: 16px;
-            padding: 24px;
-            height: 100%;
-        }
-
-        .preview-image {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-            border-radius: 12px;
-            margin-bottom: 20px;
-        }
-
-        /* Testimonials */
-        .testimonials {
-            padding: 60px 0;
-        }
-
-        .testimonial-card {
-            background: rgba(255, 255, 255, 0.05);
-            border-radius: 16px;
-            padding: 24px;
-            margin-bottom: 20px;
-        }
-
-        .user-profile {
-            display: flex;
-            align-items: center;
-            margin-bottom: 16px;
-        }
-
-        .user-profile img {
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            margin-right: 12px;
-        }
-
-        /* Contact Form */
-        .contact-form {
-            background: rgba(255, 255, 255, 0.05);
-            border-radius: 16px;
-            padding: 32px;
-            margin-top: 60px;
-        }
-
-        .form-control {
-            background: rgba(255, 255, 255, 0.1);
-            border: none;
-            color: white;
-            padding: 12px;
-            margin-bottom: 16px;
-        }
-
-        .form-control::placeholder {
-            color: rgba(255, 255, 255, 0.5);
-        }
-
-        .btn-send {
-            background: var(--primary-color);
-            color: #000;
-            width: 100%;
-            padding: 12px;
-            border: none;
-            border-radius: 8px;
-            font-weight: 600;
-        }
-
-        /* Floating Objects */
-        .floating-object {
-            position: absolute;
-            pointer-events: none;
-        }
-
-        .star {
-            width: 4px;
-            height: 4px;
-            background: white;
-            border-radius: 50%;
-        }
-
-        .coin {
-            width: 30px;
-            height: 30px;
-            border-radius: 50%;
-            background: #FFD700;
-            opacity: 0.8;
-        }
-
-        .planet {
-            width: 80px;
-            height: 80px;
-            border-radius: 50%;
-            background: var(--primary-color);
-            opacity: 0.2;
-        }
-
-        .shield {
-            width: 100px;
-            height: 100px;
-            background: var(--primary-color);
-            opacity: 0.2;
-            clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
-        }
     </style>
+
 </head>
 <body>
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg">
-        <div class="container">
-            <a class="logo" href="#">FX</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto align-items-center">
-                    <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">About Us</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Our Services</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Contact us</a></li>
-                    <li class="nav-item"><a class="btn-sign-up" href="#">Sign Up</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+
+    <!-- Header Section -->
+    <header>
+        <div class="logo">FX</div>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">About us</a>
+            <a href="#">Our Services</a>
+            <a href="#">Contact us</a>
+            <button class="sign-up">Sign up</button>
+        </nav>
+    </header>
 
     <!-- Hero Section -->
-    <section class="hero" id="hero">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8">
-                    <h1>We make investing<br>clear and simple.</h1>
-                    <p>From beginners to experts, we make it easy for everyone to invest and thrive.</p>
-                    <button class="btn-get-started">Get Started</button>
-                </div>
+    <section class="hero">
+        <h1>We make investing clear and simple.</h1>
+        <p>From beginners to experts, we make it easy for everyone to invest and thrive.</p>
+        <button class="get-started">Get Started</button>
+        <div class="background-graphics">
+            <!-- Shapes and stars to match the design in the provided image -->
+            <div class="shape shape1"></div>
+            <div class="shape shape2"></div>
+            <div class="shape shape3"></div>
+            <!-- Add more shapes as needed -->
+        </div>
+    </section>
+
+    <!-- Introduction Section -->
+    <section class="intro">
+        <h2>Welcome to <span class="highlight">FundX</span> – Your gateway to effortless investing!</h2>
+        <p>At FundX, we believe that investing should be clear, simple, and accessible to everyone, whether you’re a beginner or an experienced investor.</p>
+        <button class="get-started">Get Started</button>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section class="why-choose-us">
+        <h2>Why Choose Us?</h2>
+        <div class="features">
+            <div class="feature">
+                <img src="assets/icons/strategies.png" alt="Proven Strategies">
+                <h3>Proven Strategies</h3>
+                <p>We offer proven strategies designed to maximize your returns while minimizing risks.</p>
+            </div>
+            <div class="feature">
+                <img src="assets/icons/management.png" alt="Expert Management">
+                <h3>Expert Management</h3>
+                <p>Our experts manage your investments to ensure sustainable growth.</p>
+            </div>
+            <div class="feature">
+                <img src="assets/icons/advice.png" alt="Personalized Advice">
+                <h3>Personalized Advice</h3>
+                <p>Get personalized advice from our team of experienced financial consultants.</p>
+            </div>
+            <div class="feature">
+                <img src="assets/icons/platform.png" alt="Easy Platform">
+                <h3>Easy Platform</h3>
+                <p>Our intuitive platform makes investing easy, no matter your level of experience.</p>
             </div>
         </div>
     </section>
 
-    <!-- Welcome Section -->
-    <section class="welcome">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8">
-                    <h2>Welcome to <span>FundX</span> - your gateway to effortless investing!</h2>
-                    <p>At FundX, we make the investing process as clear, simple, and accessible to everyone, whether you're a beginner or an expert.</p>
-                </div>
+    <!-- Invest with Us Section -->
+    <section class="invest-with-us">
+        <h2>Invest with us</h2>
+        <p>Invest with us in a variety of profitable projects that meet your financial needs.</p>
+        <div class="investment-options">
+            <div class="list-group">
+                <button class="list-group-item active" data-target="#realEstate">01 Real Estate</button>
+                <button class="list-group-item" data-target="#schools">02 Schools</button>
+                <button class="list-group-item" data-target="#hospitals">03 Hospitals</button>
+                <button class="list-group-item" data-target="#nightclubs">04 Nightclubs</button>
+            </div>
+            <div class="investment-details">
+                <img id="contentImage" src="assets/image/image.png" alt="Real Estate">
+                <h3 id="contentTitle">Real Estate</h3>
+                <p id="contentDescription">
+                    <strong>Features:</strong> Stable investment with asset value increasing over time, monthly rental income, inflation protection.<br>
+                    <strong>Prices:</strong> Starting at $50,000 for small investments in commercial or residential properties.<br>
+                    <strong>Profit period:</strong> Long-term returns starting within 2-5 years.
+                </p>
             </div>
         </div>
     </section>
 
-    <!-- Features Section -->
-    <section class="features">
-        <div class="container">
-            <h2 class="text-center">Why Choose Us !?</h2>
-            <div class="row">
-                <div class="col-md-3">
-                    <div class="feature-card">
-                        <h4>Proven Strategies</h4>
-                        <p>Designed to maximize your investment success with proven methodologies.</p>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="feature-card">
-                        <h4>Expert Management</h4>
-                        <p>Professional portfolio management for optimal returns.</p>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="feature-card">
-                        <h4>Personalized Advice</h4>
-                        <p>Tailored investment guidance based on your goals.</p>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="feature-card">
-                        <h4>Easy Platform</h4>
-                        <p>Simple and intuitive interface for seamless investing.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Investment Section -->
-    <section class="investment">
-        <div class="container">
-            <h3>Invest with us</h3>
-            <div class="row">
-                <div class="col-lg-4">
-                    <div class="investment-option active">
-                        <span>01</span>
-                        <span>Real Estate</span>
-                        <span>→</span>
-                    </div>
-                    <div class="investment-option">
-                        <span>02</span>
-                        <span>Schools</span>
-                        <span>→</span>
-                    </div>
-                    <div class="investment-option">
-                        <span>03</span>
-                        <span>Hospitals</span>
-                        <span>→</span>
-                    </div>
-                    <div class="investment-option">
-                        <span>04</span>
-                        <span>Nightclubs</span>
-                        <span>→</span>
-                    </div>
-                </div>
-                <div class="col-lg-8">
-                    <div class="investment-preview">
-                        <img src="/api/placeholder/600/400" alt="Real Estate Investment" class="preview-image">
-                        <h4>Real Estate</h4>
-                        <p>Premium Dubai investments with great value increasing rate.
-                           Steady growth and high returns starting from 2.5 AED.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Testimonials -->
+    <!-- Testimonials Section -->
     <section class="testimonials">
-        <div class="container">
-            <h2 class="text-center mb-5">What our customers say about us !?</h2>
-            <div class="row">
-                <div class="col-md-4">
-                    <div class="testimonial-card">
-                        <div class="user-profile">
-                            <img src="/api/placeholder/40/40" alt="User">
-                            <div>
-                                <h5>Ahmad Ali</h5>
-                                <small>24 hours ago</small>
-                            </div>
-                        </div>
-                        <p>Best investment platform! The team is very professional and helpful.</p>
-                    </div>
-                </div>
-                <!-- Repeat for other testimonials -->
+        <h2>What our customers say about us !?</h2>
+        <div class="testimonial-list">
+            <!-- Repeat testimonial structure based on design -->
+            <div class="testimonial">
+                <h4>Ahmad Ali</h4>
+                <p>Great service and amazing returns on my investments!</p>
+                <span>20 hours ago</span>
             </div>
         </div>
     </section>
 
-    <!-- Contact Form -->
+    <!-- Contact Us Section -->
     <section class="contact">
-        <div class="container">
-            <h2 class="text-center mb-4">Contact us</h2>
-            <div class="row justify-content-center">
-                <div class="col-lg-8">
-                    <div class="contact-form">
-                        <div class="row">
-                            <div class="col-md-6">
-                                <input type="text" class="form-control" placeholder="Name">
-                            </div>
-                            <div class="col-md-6">
-                                <input type="email" class="form-control" placeholder="Email">
-                            </div>
-                        </div>
-                        <textarea class="form-control" rows="5" placeholder="Message"></textarea>
-                        <button class="btn-send">SEND</button>
-                    </div>
-                </div>
-            </div>
-        </div>
+        <h2>Contact us</h2>
+        <form>
+            <input type="text" placeholder="Name">
+            <input type="email" placeholder="Email">
+            <textarea placeholder="Message"></textarea>
+            <button type="submit">Send</button>
+        </form>
     </section>
 
-    <!-- CTA Section -->
-    <section class="cta text-center py-5">
-        <div class="container">
-            <h2>It's time to join the thousands of<br>investors and entrepreneurs<br>using <span>FUNDX</span>.</h2>
-            <button class="btn-get-started mt-4">Get Started</button>
+    <!-- Footer Section -->
+    <footer>
+        <div class="footer-content">
+            <p>Empowering your investments, building your future.</p>
+            <button class="sign-up">Sign up</button>
         </div>
-    </section>
+        <div class="footer-bottom">
+            <p>&copy; 2024 FundX Foundation. All rights reserved.</p>
+        </div>
+    </footer>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
-    <script>
-        // Create floating objects
-        function createFloatingObjects() {
-            const hero = document.getElementById('hero');
-            const objects = [
-                { class: 'star', count: 20 },
-                { class: 'coin', count: 5 },
-                { class: 'planet', count: 3 },
-                { class: 'shield', count: 1 }
-            ];
-
-            objects.forEach(obj => {
-                for (let i = 0; i < obj.count; i++) {
-                    const element = document.createElement('div');
-                    element.className = `floating-object ${obj.class}`;
-                    element.style.left = `${Math.random() * 100}%`;
-                    element.style.top = `${Math.random() * 100}%`;
-                    hero.appendChild(element);
-
-                    // Add floating animation
-                    setInterval(() => {
-                        element.style.transform = `translate(${Math.random() * 20 - 10}px, ${Math.random() * 20 - 10}px)`;
-                    }, 2000);
-                }
-            });
-        }
-
-        // Initialize floating objects
-        document.addEventListener('DOMContentLoaded', createFloatingObjects);
-
-        // Handle investment options
-        const investmentOptions = document.querySelectorAll('.investment-option');
-        investmentOptions.forEach(option => {
-            option.addEventListener('click', () => {
-                investmentOptions.forEach(opt => opt.classList.remove('active'));
-                option.classList.add('active');
-            });
-        });
-    </script>
+    <script src="assets/script.js"></script>
 </body>
 </html>
