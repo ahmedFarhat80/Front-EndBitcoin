@@ -3,9 +3,11 @@ body {
     margin: 0;
     background-color: #030902;
     color: #FFF;
-    font-family: Arial, sans-serif;
+    /* font-family: Arial, sans-serif;  */
     overflow-x: hidden;
     overflow-y: auto;
+    font-family: Inter;
+
 }
 
 ::-webkit-scrollbar {
@@ -422,6 +424,33 @@ body {
 }
 
 
+.left-green-light2 {
+    background: linear-gradient(180deg, rgba(24, 255, 158, 0) 0%, #64E726 100%);
+    width: 450px;
+    height: 450px;
+    top: 3220px;
+    left: -100px;
+    border-radius: 50%;
+    filter: blur(180px);
+    animation: pulse-light 3s ease-in-out infinite;
+    z-index: -3;
+    position: absolute;
+}
+
+.left-white-light2 {
+    background: linear-gradient(180deg, rgba(24, 255, 158, 0) 0%, #ffffff 100%);
+    width: 350px;
+    height: 350px;
+    top: 3070px;
+    left: -100px;
+    border-radius: 50%;
+    filter: blur(150px);
+    animation: pulse-light 3s ease-in-out infinite;
+    z-index: -3;
+    position: absolute;
+}
+
+
 .overlay-section h2 {
     font-size: 2.5rem;
     font-weight: bold;
@@ -465,7 +494,7 @@ body {
     font-size: 2.5rem;
     font-weight: bold;
     background-image:
-        radial-gradient(circle at 20% 30%, #FFFFFF, transparent 80%),
+        radial-gradient(circle at 20% 30%, #FFFFFF, transparent 99%),
         linear-gradient(120deg, #5bb145, #FFFFFF);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -967,4 +996,144 @@ body {
 .arrow.right-arrow:not(.disabled):hover .arrow-path {
     fill: url(#paint-hover-right);
     /* تدرج لوني داكن للسهم الأيمن */
+}
+
+
+
+/* تنسيق رئيسي لنموذج الاتصال */
+.contact-form {
+    min-width: 95%;
+    background: #1E1E23;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    padding: 20px;
+}
+
+/* لون النص الأخضر */
+.text-success {
+    color: #8CD983 !important;
+}
+
+/* تنسيق عناوين الحقول */
+.form-label {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 1.2;
+    margin-bottom: 8px;
+}
+
+/* تنسيق الحقول */
+.input-field {
+    color: rgba(160, 160, 160, 0.8);
+    font-size: 16px;
+    font-weight: 300;
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+    transition: box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+/* نص العنصر النائب */
+.input-field::placeholder {
+    color: #9CA0AD;
+}
+
+/* تأثير التركيز على الحقول */
+.input-field:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgba(92, 184, 92, 0.5);
+    border-color: rgba(92, 184, 92, 0.6);
+}
+
+/* زر الإرسال */
+.btn-send {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #000;
+    border-radius: 10px;
+    border: 1px solid rgba(94, 187, 71, 0.6);
+    background: linear-gradient(94deg, #5EBB47 0%, #FFF 100%);
+    box-shadow: inset 0px 4px 14px rgba(0, 0, 0, 0.25);
+    transition: box-shadow 0.3s ease, transform 0.3s ease, border-color 0.3s ease;
+}
+
+/* تأثير التحويم على زر الإرسال */
+.btn-send:hover {
+    background: linear-gradient(94deg, #4CAF50 0%, #FFF 100%);
+    box-shadow: 0px 6px 20px rgba(94, 187, 71, 0.6);
+    transform: translateY(-2px);
+    border-color: rgba(76, 175, 80, 0.8);
+}
+
+/* تأثير الضغط على زر الإرسال */
+.btn-send:active {
+    background: #3A8133;
+    box-shadow: inset 0px 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+
+
+
+/* تنسيق الخلفية للقسم */
+.cta-section {
+    min-height: 80vh;
+    padding: 40px 0;
+}
+
+.cta-heading {
+    font-size: 2.5rem;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.8);
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.white {
+    font-size: 2.5rem;
+    font-weight: bold;
+    background-image:
+        radial-gradient(circle at 20% 30%, #FFFFFF, transparent 99%),
+        linear-gradient(120deg, #ffffff, #FFFFFF) !important;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: white;
+    position: relative;
+
+}
+
+.w-20 {
+    width: 20% !important;
+}
+
+.btn-Started {
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.47);
+    background: linear-gradient(227deg, #5EBB47 39.75%, #FFF 137.57%);
+    box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.25);
+    color: #000;
+    font-weight: bold;
+    padding: 12px 24px;
+    transition: background 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease, border-color 0.3s ease;
+}
+
+.btn-Started:hover {
+    background: linear-gradient(227deg, #4CAF50 39.75%, #FFF 137.57%);
+    border-color: rgba(76, 175, 80, 0.8);
+    box-shadow: 0px 6px 20px rgba(94, 187, 71, 0.6);
+    transform: translateY(-2px);
+}
+
+.btn-Started:active {
+    background: #3a8133;
+    box-shadow: inset 0px 4px 8px rgba(0, 0, 0, 0.3);
+    transform: translateY(0px);
+}
+
+.btn-Started:focus {
+    outline: none;
+    box-shadow: 0px 0px 0px 4px rgba(94, 187, 71, 0.4);
 }
