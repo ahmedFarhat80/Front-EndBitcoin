@@ -4,7 +4,9 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>مدار الكواكب</title>
+    <title>
+        FUND X
+    </title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 
@@ -14,6 +16,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
         rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
 </head>
 
@@ -32,78 +35,131 @@
 
         <div class="left-green-light2"></div>
         <div class="left-white-light2"></div>
+
+        <div class="purple-light2"></div>
+        <div class="purple-blue-light2"></div>
+        <div class="purple-green-light2"></div>
     </div>
 
     <!-- Header Section -->
-    <header class="header container">
-        <div class="logo">
-            <svg xmlns="http://www.w3.org/2000/svg" width="96" height="60" viewBox="0 0 96 60" fill="none">
-                <path
-                    d="M10.2442 35.1091V59.6889H0V0.157721C1.02681 0.157721 1.92627 0.157721 2.82572 0.157721C17.0976 0.157721 31.3615 0.181598 45.6334 0.11792C47.297 0.11792 48.3715 0.595506 49.4222 1.90887C64.4184 20.6143 79.4863 39.28 94.5223 57.9536C94.9203 58.4471 95.2705 58.9725 95.9232 59.856C91.4737 59.856 87.4779 59.9515 83.49 59.7764C82.71 59.7446 81.8185 58.8133 81.2374 58.0969C68.9475 42.8937 56.6656 27.6747 44.4553 12.4078C43.3648 11.0387 42.2982 10.4019 40.4993 10.4179C31.3535 10.5054 22.1998 10.4497 13.054 10.4577C12.2342 10.4577 11.4143 10.5373 10.4034 10.585V24.7375H42.1152V35.1011H10.2363L10.2442 35.1091Z"
-                    fill="#5EBB47" />
-                <path
-                    d="M51.9104 38.2605C54.2506 41.1579 56.344 43.7527 58.6205 46.5705C55.2138 50.7971 51.8388 55.0238 48.4082 59.1947C48.0977 59.5688 47.4132 59.8156 46.8958 59.8235C42.9716 59.8713 39.0475 59.8553 34.5422 59.8553C40.4643 52.4926 46.0759 45.5118 51.9104 38.2685V38.2605Z"
-                    fill="white" />
-                <path
-                    d="M95.9996 0.149597C90.0537 7.54422 84.4818 14.4692 78.6553 21.7206C76.3469 18.863 74.1898 16.1806 71.9452 13.4026C75.3122 9.21577 78.5757 5.10853 81.9188 1.06497C82.3247 0.57146 83.1685 0.205318 83.8132 0.189398C87.6657 0.109801 91.5103 0.149597 95.9996 0.149597Z"
-                    fill="white" />
-            </svg>
+    <header class="header container-fluid navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a href="#" class="logo">
+                <img src="assets/image/logo.svg" alt="Logo" class="w-100">
+            </a>
+
+            <!-- Toggler Button for Mobile -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent"
+                aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Menu Content -->
+            <nav class="collapse navbar-collapse" id="navbarContent">
+                <!-- Close button in mobile view -->
+                <button type="button" class="close-menu-btn d-lg-none" aria-label="Close menu">
+                    &times;
+                </button>
+
+                <!-- Menu items -->
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a href="#Home" class="nav-link active">Home</a></li>
+                    <li class="nav-item"><a href="#about" class="nav-link">About us</a></li>
+                    <li class="nav-item"><a href="#services" class="nav-link">Our Services</a></li>
+                    <li class="nav-item"><a href="#contact" class="nav-link">Contact us</a></li>
+                </ul>
+                <button class="sign-up-btn ms-3 d-none d-lg-inline-block">Sign up</button>
+
+                <!-- Language selector button, always visible on all screens -->
+                <div class="dropdown ms-lg-3">
+                    <button class="btn btn-light dropdown-toggle" type="button" id="languageDropdown"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        EN
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="languageDropdown">
+                        <li><a class="dropdown-item" href="#">EN</a></li>
+                        <li><a class="dropdown-item" href="#">AR</a></li>
+                    </ul>
+                </div>
+
+                <!-- Sign Up button for desktop view (hidden on mobile) -->
+
+                <!-- Sign Up button for mobile view (full width) -->
+                <button class="sign-up-btn w-100 d-lg-none mt-3">Sign up</button>
+            </nav>
         </div>
-        <nav>
-            <a href="#" class="nav-link-1">Home</a>
-            <a href="#" class="nav-link-1">About us</a>
-            <a href="#" class="nav-link-1">Our Services</a>
-            <a href="#" class="nav-link-1">Contact us</a>
-        </nav>
-        <button class="sign-up-btn">Sign up</button>
     </header>
 
+
+
+
+
     <!-- Main Section -->
-    <section class="main-section">
-        <h1 class="text-make">We make investing<br> clear and simple.</h1>
-        <p class="green-highlight mt-2 mb-2">From beginners to experts, we make it easy for everyone to invest and
+    <section class="main-section" id="Home">
+        <h1 class="text-make" data-aos="fade-in">We make investing<br>
+            clear and simple.</h1>
+        <p class="green-highlight mt-2 mb-2" data-aos="fade-in">From
+            beginners to experts, we make it easy for everyone
+            to invest
+            and
             thrive.</p>
-        <a href="#" class="btn btn-Started w-20 mt-4">Get Started</a>
+        <a href="#" class="btn btn-Started w-20 mt-4" data-aos="fade-up" data-aos-duration="1000"
+            data-aos-delay="200">Get Started</a>
 
         <!-- Galaxy Background (SVG Orbit) -->
         <div class="galaxy-background">
-            <img src="assets/image/Bitcoin-1.png" class="svg-element planet1" alt="Planet 1">
-            <img src="assets/image/glass.png" class="svg-element glass" alt="glass">
-            <img src="assets/image/orange-sphere.png" class="svg-element planet-1" alt="Planet-1">
-            <img src="assets/image/lefit-star-img.svg" class="svg-element lefit-star" alt="Planet-1">
-            <img src="assets/image/right-star-img.svg" class="svg-element right-star" alt="Planet-1">
-            <img src="assets/image/lefit-star-img.svg" class="svg-element right-sm-star" alt="Planet-1">
-            <img src="assets/image/lefit-star-img.svg" class="svg-element right-sm2-star" alt="Planet-1">
-            <img src="assets/image/LiteCoin-1.png" class="svg-element planet2" alt="Planet 2">
-            <img src="assets/image/Monero-2.png" class="svg-element planet3" alt="Planet 3">
-            <img src="assets/image/Etherium-1.png" class="svg-element planet4" alt="Planet 3">
+            <img src="assets/image/Bitcoin-1.png" class="svg-element planet1" alt="Planet 1" data-aos="fade-right">
+            <img src="assets/image/glass.png" class="svg-element glass" alt="glass" data-aos="fade-right">
+            <img src="assets/image/orange-sphere.png" class="svg-element planet-1" alt="Planet-1" data-aos="fade-right">
+            <img src="assets/image/lefit-star-img.svg" class="svg-element lefit-star" alt="Planet-1"
+                data-aos="fade-right">
+            <img src="assets/image/right-star-img.svg" class="svg-element right-star" alt="Planet-1" data-aos="fade-in">
+            <img src="assets/image/lefit-star-img.svg" class="svg-element right-sm-star" alt="Planet-1"
+                data-aos="fade-in">
+            <img src="assets/image/lefit-star-img.svg" class="svg-element right-sm2-star" alt="Planet-1"
+                data-aos="fade-in">
+            <img src="assets/image/LiteCoin-1.png" class="svg-element planet2" alt="Planet 2" data-aos="fade-in">
+            <img src="assets/image/Monero-2.png" class="svg-element planet3" alt="Planet 3" data-aos="fade-in">
+            <img src="assets/image/Etherium-1.png" class="svg-element planet4" alt="Planet 3" data-aos="fade-in">
             <img src="assets/image/green.svg" class="svg-element green" alt="green">
-            <img src="assets/image/star-img-left.svg" class="svg-element star-img-left" alt="star-img-left">
-            <img src="assets/icon/star-img-why.svg" class="svg-element star-img-why" alt="star-img-why">
-            <img src="assets/image/star-img-why-2.svg" class="svg-element star-img-why-2" alt="star-img-why-2">
+            <img src="assets/image/star-img-left.svg" class="svg-element star-img-left" alt="star-img-left"
+                data-aos="fade-in">
+            <img src="assets/icon/star-img-why.svg" class="svg-element star-img-why" alt="star-img-why"
+                data-aos="fade-in">
+            <img src="assets/image/star-img-why-2.svg" class="svg-element star-img-why-2" alt="star-img-why-2"
+                data-aos="fade-in">
         </div>
     </section>
 
 
     <!-- New Overlay Section -->
-    <section class="overlay-section">
+    <section class="overlay-section" id="about">
         <div class="container">
             <div class="row align-items-center justify-content-center">
                 <!-- Image -->
-                <div class="col-md-3 text-center me-4">
+                <div class="col-md-3 text-center me-4" data-aos="fade-right" data-aos-duration="1000"
+                    data-aos-delay="200">
                     <img src="assets/image/scuer.png" alt="Illustrative Image" class="img-fluid" width="275px">
                 </div>
 
                 <!-- Text Content -->
-                <div class="col-md-7 text-center text-md-start text-lead">
+                <div class="col-md-7 text-center text-md-start text-lead" data-aos="fade-left" data-aos-duration="1000"
+                    data-aos-delay="200">
                     <h2>Welcome to<span class="green-highlight"> Fund</span>X – your gateway to effortless investing!
                     </h2>
-                    <p class="lead mt-3">At FundX, we believe that investing should be clear, simple, and accessible to
-                        everyone, whether you’re a beginner or an experienced investor.</p>
-                    <p class="mb-4">Our expert team is dedicated to providing reliable investment strategies and
-                        personalized advisory support, ensuring that your financial goals are met with confidence. Join
+
+                    <p class="lead mt-3">
+                        At FundX, we believe that investing should be clear, simple, and accessible to
+                        everyone, whether you’re a beginner or an experienced investor.
+                    </p>
+                    <p class="mb-4">
+                        Our expert team is dedicated to providing reliable investment strategies and
+                        personalized advisory support, ensuring that your financial goals are met with confidence.
+                        Join
                         us and take the first step toward a prosperous financial future!</p>
-                    <a href="#" class="btn btn-outline-light btn-lg ps-5 pe-5">Get Started</a>
+
+                    <a href="#" class="btn btn-outline-light btn-lg ps-5 pe-5" data-aos="fade-up">Get Started</a>
+
                 </div>
             </div>
         </div>
@@ -111,13 +167,13 @@
 
 
     <!-- New Choose Us Section -->
-    <section class="choose-section py-5">
+    <section class="choose-section py-5" id="services">
         <div class="container text-center text-white">
-            <h2 class="mb-5 pb-3"> <span class="green-highlight"> Why Choose Us !?</span></h2>
+            <h2 class="mb-5 pb-3" data-aos="fade-down"> <span class="green-highlight"> Why Choose Us !?</span></h2>
 
             <div class="row justify-content-center">
                 <!-- Card 1 -->
-                <div class="col-md-3 mb-4">
+                <div class="col-md-3 mb-4" data-aos="zoom-out-right">
                     <div class="choose-card p-4">
                         <div class="icon-wrapper mb-3">
                             <img src="assets/icon/icon-proven.svg" alt="Icon">
@@ -128,7 +184,7 @@
                     </div>
                 </div>
                 <!-- Card 2 -->
-                <div class="col-md-3 mb-4">
+                <div class="col-md-3 mb-4" data-aos="zoom-out-right">
                     <div class="choose-card p-4">
                         <div class="icon-wrapper mb-3">
                             <img src="assets/icon/icon-Expert.svg" alt="Icon" width="40">
@@ -138,7 +194,7 @@
                     </div>
                 </div>
                 <!-- Card 3 -->
-                <div class="col-md-3 mb-4">
+                <div class="col-md-3 mb-4" data-aos="zoom-in-left">
                     <div class="choose-card p-4">
                         <div class="icon-wrapper mb-3">
                             <img src="assets/icon/icon-personalized.svg" alt="Icon" width="40">
@@ -148,7 +204,7 @@
                     </div>
                 </div>
                 <!-- Card 4 -->
-                <div class="col-md-3 mb-4">
+                <div class="col-md-3 mb-4" data-aos="zoom-in-left">
                     <div class="choose-card p-4">
                         <div class="icon-wrapper mb-3">
                             <img src="assets/icon/icon-personalized.svg" alt="Icon" width="40">
@@ -164,31 +220,32 @@
 
     <section class="invest-section py-5">
         <div class="container text-center">
-            <h2 class="mb-5 pb-3"> <span class="green-highlight"> Invest with us</span></h2>
+            <h2 class="mb-5 pb-3" data-aos="fade-in"> <span class="green-highlight"> Invest with us</span></h2>
 
-            <p class="section-subtitle">"Invest with us in a variety of profitable projects that meet your financial
+            <p class="section-subtitle" data-aos="fade-in">"Invest with us in a variety of profitable projects that meet
+                your financial
                 needs."</p>
 
             <div class="row">
                 <div class="col-md-4">
                     <div class="list-group">
-                        <button class="list-group-item active" data-target="#realEstate">
+                        <button class="list-group-item active" data-target="#realEstate" data-aos="fade-right">
                             <span class="item-number">01</span> Real Estate
                         </button>
-                        <button class="list-group-item" data-target="#schools">
+                        <button class="list-group-item" data-target="#schools" data-aos="fade-right">
                             <span class="item-number">02</span> Schools
                         </button>
-                        <button class="list-group-item" data-target="#hospitals">
+                        <button class="list-group-item" data-target="#hospitals" data-aos="fade-right">
                             <span class="item-number">03</span> Hospitals
                         </button>
-                        <button class="list-group-item" data-target="#nightclubs">
+                        <button class="list-group-item" data-target="#nightclubs" data-aos="fade-right">
                             <span class="item-number">04</span> Nightclubs
                         </button>
                     </div>
 
                 </div>
                 <div class="col-md-8">
-                    <div id="contentDisplay" class="content-card">
+                    <div id="contentDisplay" class="content-card" data-aos="fade-left">
                         <div class="background-green"></div> <!-- الخلفية الخضراء -->
                         <div class="tilted-container">
                             <img id="contentImage" src="assets/image/image.png" alt="Real Estate Image">
@@ -221,8 +278,8 @@
 
     <!-- customers section -->
     <div class="testimonial-section">
-        <h2 class="section-title">What our customers say about us !?</h2>
-        <div class="testimonial-container">
+        <h2 class="section-title" data-aos="fade-in">What our customers say about us !?</h2>
+        <div class="testimonial-container"  data-aos="fade-up">
             <!-- Testimonial Card 1 -->
             <div class="testimonial-card">
                 <div class="card-header">
@@ -417,7 +474,7 @@
 
 
 
-    <div class="container d-flex justify-content-center align-items-center min-vh-100">
+    <div class="container d-flex justify-content-center align-items-center min-vh-100" id="contact" data-aos="fade-in">
         <div class="contact-form p-4 rounded">
             <h2 class="text-center">
                 <span class=" green-highlight">Contact us</span>
@@ -447,18 +504,68 @@
         </div>
     </div>
 
-    <section class="cta-section d-flex align-items-center justify-content-center">
+    <section class="cta-section d-flex align-items-center justify-content-center"  data-aos="fade-in">
         <div class="container text-center">
             <h1 class="cta-heading green-highlight">
                 It's time to join the thousands of
                 investors and entrepreneurs <br>
                 using <span class="white">FUND</span> X.
             </h1>
-            <a href="#" class="btn btn-Started w-20 mt-4">Get Started</a>
+            <a href="#" class="btn btn-Started w-20 mt-4" data-aos="fade-up">Get Started</a>
         </div>
     </section>
 
 
+    <footer class="footer py-3">
+        <div class="container">
+            <div class="row">
+                <!-- القسم الأول: الشعار والنص -->
+                <div class="col-md-4 mb-4">
+                    <img src="assets/image/logo.svg" alt="Logo" class="mb-3">
+                    <p>Empowering your investments, building your future.</p>
+                </div>
+
+                <!-- القسم الثاني: قائمة الروابط -->
+                <div class="col-md-4 mb-4 ps-5">
+                    <h5 class="footer-title"><span class="text-success">FUND</span>X</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="footer-link">Home page</a></li>
+                        <li><a href="#" class="footer-link">About us</a></li>
+                        <li><a href="#" class="footer-link">Our service</a></li>
+                        <li><a href="#" class="footer-link">Contact us</a></li>
+                    </ul>
+                </div>
+
+                <!-- القسم الثالث: معلومات التواصل -->
+                <div class="col-md-4 mb-4">
+                    <h5 class="footer-title">Contact us</h5>
+                    <ul class="list-unstyled">
+                        <li>
+                            <img src="assets/icon/Location.svg" alt="Location" class="m-2">
+                            Reem Developers HQ Building, Al-Nahyan, Abu Dhabi
+                        </li>
+                        <li>
+                            <img src="assets/icon/Call.svg" alt="Location" class="m-2">
+
+                            +1 45 875 1235
+                        </li>
+                        <li>
+                            <img src="assets/icon/email.svg" alt="Location" class="m-2">
+                            Info@fund-x.net
+                        </li>
+                    </ul>
+                    <a href="#" class="btn btn-success w-50">Sign Up</a>
+                </div>
+            </div>
+
+            <!-- النص السفلي والخط -->
+            <div class="text-center mt-4 footer-text">
+                <p>© 2024 FundX Foundation. All rights reserved.</p>
+
+            </div>
+        </div>
+        <div class="footer-line"></div>
+    </footer>
 
 
     <script src="script.js"></script>
@@ -546,7 +653,55 @@
         updateCardsPosition();
     </script>
 
+    <script>
+        // Scroll effect for header
+        document.addEventListener('DOMContentLoaded', function () {
+            const header = document.querySelector('.header');
+            const body = document.body;
+            const navbarToggler = document.querySelector('.navbar-toggler');
+            const closeMenuBtn = document.querySelector('.close-menu-btn');
 
+            // Toggle menu class for scrolling
+            window.addEventListener('scroll', () => {
+                header.classList.toggle('scrolled', window.scrollY > 0);
+            });
+
+            // Toggle body class for menu open
+            navbarToggler.addEventListener('click', () => {
+                body.classList.toggle('menu-open');
+            });
+
+            // Close menu when clicking on the X button
+            closeMenuBtn.addEventListener('click', () => {
+                body.classList.remove('menu-open');
+                document.querySelector('.navbar-collapse').classList.remove('show');
+            });
+
+            // Close menu when clicking outside
+            document.addEventListener('click', function (e) {
+                if (!header.contains(e.target) && !navbarToggler.contains(e.target)) {
+                    body.classList.remove('menu-open');
+                    document.querySelector('.navbar-collapse').classList.remove('show');
+                }
+            });
+        });
+
+
+
+
+    </script>
+
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  
+    <script>
+        AOS.init({
+            duration: 1000,
+            delay: 200,
+            once: false,
+            easing: 'ease-in-out',
+        });
+    </script>
 </body>
 
 </html>
